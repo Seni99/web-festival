@@ -1,0 +1,268 @@
+/* --- L.E.V. FESTIVAL STYLE - AESTHETIC --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+:root {
+    --bg-color: #050505; /* Negro puro casi absoluto */
+    --text-color: #f0f0f0; /* Blanco roto */
+    --accent: #ff007f; /* Mantenemos tu rosa pop de acento */
+    --border-color: #333333; /* Gris para las líneas divisorias */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase; /* Todo en mayúsculas da ese toque "cartel de festival" */
+}
+
+/* --- NAVEGACIÓN MINIMALISTA --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* --- HERO BRUTALISTA --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    position: relative;
+    border-bottom: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+/* Imagen de fondo en escala de grises con tinte rosa */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pexels-sebastiaan9977-3379261.jpg'); /* TU IMAGEN LÁSER */
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: grayscale(100%) contrast(1.2); /* La hace blanco y negro para el estilo LEV */
+    opacity: 0.4;
+}
+
+.hero-content h1 {
+    font-size: clamp(3rem, 10vw, 8rem);
+    font-weight: 900;
+    line-height: 0.9;
+    margin: 0;
+    letter-spacing: -3px;
+}
+
+.hero-content h1 span {
+    color: var(--accent);
+}
+
+/* --- LAYOUT TIPO GRID (CUADRÍCULA) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas en ordenador */
+    border-bottom: 1px solid var(--border-color);
+}
+
+.grid-item {
+    padding: 60px 40px;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* --- SECCIONES ESPECÍFICAS --- */
+.info-section p {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 400;
+    text-transform: none; /* Dejamos el texto largo normal para que se lea bien */
+}
+
+.data-block {
+    margin-bottom: 30px;
+}
+
+.data-block span {
+    display: block;
+    font-size: 0.8rem;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+.data-block strong {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Lista del Programa */
+.brutal-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.brutal-list li {
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.brutal-list li span {
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+/* Galería */
+.gallery-flex {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery-flex img {
+    width: 50%;
+    object-fit: cover;
+    filter: grayscale(80%); /* Toque artístico */
+    transition: filter 0.4s;
+}
+
+.gallery-flex img:hover {
+    filter: grayscale(0%);
+}
+
+/* Formulario */
+.brutal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.brutal-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--border-color);
+    padding: 20px 0;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.brutal-form input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.brutal-form button {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.brutal-form button:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 40px;
+    text-align: left;
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+    }
+    
+    .grid-item {
+        border-right: none;
+        padding: 40px 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+    
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .gallery-flex {
+        flex-direction: column;
+    }
+    
+    .gallery-flex img {
+        width: 100%;
+        height: 250px;
+    }
+}

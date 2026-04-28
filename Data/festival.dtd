@@ -1,0 +1,28 @@
+<!ELEMENT festival (info_general, entradas, actividades, agenda)>
+<!ATTLIST festival 
+    nombre CDATA #REQUIRED
+    edicion CDATA #REQUIRED
+    ciudad CDATA #IMPLIED>
+
+<!ELEMENT info_general (concepto, lugar, horario)>
+<!ELEMENT concepto (#PCDATA)>
+<!ELEMENT lugar (#PCDATA)>
+<!ELEMENT horario (#PCDATA)>
+<!ATTLIST horario continuo (si|no) "si">
+
+<!ELEMENT entradas (ticket+)>
+<!ELEMENT ticket EMPTY>
+<!ATTLIST ticket 
+    tipo CDATA #REQUIRED
+    precio CDATA #REQUIRED
+    moneda CDATA #FIXED "EUR">
+
+<!ELEMENT actividades (actividad+)>
+<!ELEMENT actividad (#PCDATA)>
+<!ATTLIST actividad categoria CDATA #REQUIRED>
+
+<!ELEMENT agenda (evento+)>
+<!ELEMENT evento (hora, artista)>
+<!ATTLIST evento escenario CDATA #REQUIRED>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT artista (#PCDATA)>

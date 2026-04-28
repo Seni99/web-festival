@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE festival SYSTEM "festival.dtd">
+<festival nombre="TECH FEST 2026" edicion="26" ciudad="Gijón">
+    
+    <info_general>
+        <concepto>Laboratorio de innovación y arte digital enfocado en robótica e IA.</concepto>
+        <lugar>Centro de Arte Digital Ciudad Neón</lugar>
+        <horario continuo="si">10:00 - 22:00</horario>
+    </info_general>
+
+    <entradas>
+        <ticket tipo="General" precio="15" moneda="EUR" />
+        <ticket tipo="Estudiante" precio="10" moneda="EUR" />
+    </entradas>
+
+    <actividades>
+        <actividad categoria="A/V LIVE">Taller de Robótica Avanzada</actividad>
+        <actividad categoria="E-SPORT">Torneo Videojuegos VR</actividad>
+        <actividad categoria="TALK">Inteligencia Artificial Creativa</actividad>
+        <actividad categoria="EXPO">Instalación Neón Interactiva</actividad>
+    </actividades>
+
+    <agenda>
+        <evento escenario="ESCENARIO A">
+            <hora>18:00</hora>
+            <artista>OPENING: ROBOTIC ORCHESTRA</artista>
+        </evento>
+        <evento escenario="TEATRO DIGITAL">
+            <hora>19:30</hora>
+            <artista>AI VISUAL LIVE SHOW</artista>
+        </evento>
+        <evento escenario="PLAZA CENTRAL">
+            <hora>21:00</hora>
+            <artista>NEON VORTEX DJ SET</artista>
+        </evento>
+        <evento escenario="HALL 01">
+            <hora>22:30</hora>
+            <artista>CLOSING: VR EXPERIENCE</artista>
+        </evento>
+    </agenda>
+
+</festival>

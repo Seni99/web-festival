@@ -1,0 +1,51 @@
+Preguntas y Respuestas sobre el Proyecto
+
+¿Qué información aparece tanto en el XML como en la web?
+
+Existe una sincronización total entre la base de datos y la interfaz. La información compartida incluye:
+
+Identidad: Nombre del festival (TECH FEST 2026), edición y ciudad (Gijón).
+
+Logística: Localización, horarios de apertura y tarifas de precios.
+
+Programa: Listado de categorías y nombres de las actividades principales.
+
+Agenda: Horas específicas, nombres de las actuaciones y los escenarios asignados.
+
+
+
+¿Por qué podría ser útil guardar los datos en XML?
+
+Portabilidad: Es un formato de texto plano universal que permite compartir la información del festival con otras aplicaciones o plataformas de venta de entradas.
+
+Mantenimiento: Permite actualizar la programación o los precios en un solo archivo centralizado sin necesidad de modificar el código HTML de la web.
+
+Estructura Jerárquica: Organiza la información de forma lógica, facilitando la búsqueda y el procesamiento de datos complejos.
+
+
+
+¿Qué comprueba la DTD?
+
+La DTD actúa como el control de calidad del proyecto, verificando:
+
+Estructura: Que los elementos aparezcan en el orden lógico establecido.
+
+Obligatoriedad: Que no falten datos esenciales, como el precio de una entrada o la hora de un evento.
+
+Integridad: Que los atributos (como continuo="si") solo contengan valores válidos y permitidos.
+
+
+
+¿Qué ocurre si cambio el orden de los elementos?
+
+Si se altera el orden definido en la DTD, el archivo XML se vuelve inválido. Los validadores marcarán un error de estructura, ya que el sistema espera encontrar la información en una secuencia específica para poder procesarla correctamente.
+
+
+
+¿Qué ventaja tiene usar atributos como id o tipo?
+
+Clasificación Eficiente: Permite diferenciar categorías (como tipos de entrada o tipos de evento) para aplicar filtros o estilos de forma automática.
+
+Metadatos: Añaden información técnica necesaria (como la moneda EUR) sin ensuciar el contenido de texto que lee el usuario final.
+
+Identificación Única: Facilitan la referencia a elementos específicos dentro de una base de datos más amplia.
